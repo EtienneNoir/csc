@@ -1,0 +1,559 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+table, th, tr{
+    border-collapse: collapse;
+}
+th, tr, td{
+    padding: 10px;
+    text-align: justify;
+}
+table{
+    /*border-top: 1px solid gray;*/
+    width: 100%;
+    padding-top: 40px;
+    max-width: 100%;
+}
+footer {
+    padding: 10px;
+    background-color: slateblue;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+th{
+    font-size: 30px;
+}
+th, td {
+    max-width: none; /* Reset max-width for table cells */
+}
+#top_nav{
+    background-color: black;
+    padding: 1px;
+    position: fixed; /* Set the top navigation to a fixed position */
+    width: 100%;
+    z-index: 100; /* Ensure it appears above other content */
+    top: 0px;
+}
+
+#bottom_nav{
+    background-color:whitesmoke;
+    padding: 10px;
+    position: fixed; /* Set the bottom navigation to a fixed position */
+    width: 100%;
+    top: 53px; /* Place it at the bottom of the viewport */
+    z-index: 100; /* Ensure it appears above other content */
+}
+nav li{
+    display: inline;
+    margin-right: 10px;
+}
+nav li a, footer a {
+    text-decoration: none;
+}
+#top_nav a{
+    color:white;
+}
+#bottom_nav a{
+    color: black;
+}
+#bottom_nav ul {
+    display: flex; /* Use flexbox to align items vertically */
+    align-items: center; /* Vertically center items within the flex container */
+    list-style: none; /* Remove list styles */
+    padding: 0;
+    margin: 0;
+}
+
+#bottom_nav li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust styles for the login button */
+#login_button {
+    margin-left: auto; /* Push the login button to the right */
+    padding: 8px;
+    border-radius: 9px;
+    background-color: slateblue;
+    color: white;
+    text-decoration: none;
+    position: absolute; /* Position it absolutely */
+    right: 40px; /* Adjust the right position as needed */
+    top: 10px; /* Adjust the top position as needed */
+}
+
+form{
+    display: inline;
+}
+#extra_link a{
+    padding: 10px;
+}
+.left,.right{
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+.right {
+    right:0;
+    border-radius: 3px 0 0 3px;
+  }
+.left{
+    left:0;
+    border-radius:3px 0 0 3px;
+}
+.left:hover, /* adds a black background when cursor overs over it*/
+.right:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.Gallery-container{
+    position: relative;
+}
+
+#slideshow {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+.slide {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding: 50px; /* Add padding for spacing */
+    max-width: 100%; /* Ensure the slide doesn't exceed the screen width */
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+}
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.image {
+    width: 45%; /* Left half for the image */
+    max-width: 50%; /* Ensure the image doesn't exceed the slide width */
+}
+
+.image img {
+    max-height: 350px; /* Set the maximum height for the images */
+    width: 100%;
+}
+
+.text {
+    width: 45%; /* Right half for text content */
+    padding-left: 20px; /* Add padding between image and text */
+    max-width: 45%; /* Ensure text doesn't exceed the slide width */
+}
+
+.text p {
+    text-align: left; /* Adjust text alignment as needed */
+    margin: 0; /* Remove default margin */
+}
+#search_bar {
+    width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 0px;
+    text-align: center;
+}
+
+/* Add more styles as needed for navigation buttons, etc. */
+#slideshow2 {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+footer ol{
+    list-style-type: disc;
+}
+
+  /*****************************************\
+  |    SLIDESHOW GALERRY STYLING            |
+  |                                         |
+  \ *****************************************/
+
+  .Gallery-container{
+    margin: 100% auto;
+    padding-left:12px;
+    padding-right:12px;
+
+  }
+  
+    
+  
+  .rt-row:before, .rt-row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  
+  .rt-row:after {
+    clear: both;
+  }
+  [class^="col-rt-"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 0 15px;
+    min-height: 1px;
+    position: relative;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .rt-container {
+      width: 750px;
+    }
+    [class^="col-rt-"] {
+      float: left;
+      width: 49.9999999999%;
+    }
+     .col-rt-12 {
+      width: auto;
+    }
+    
+  }
+  
+  @media (min-width: 1200px) {
+    .rt-container {
+      width: 1170px;
+    }
+    
+  
+  }
+/* slider */
+#slider{
+width:100%;
+height:500px;
+position:relative;
+overflow:hidden;
+}
+@keyframes load{
+from{left:-100%;}
+to{left:0;}
+}
+/*These are the dimensions of all the images of the slide show including animation duration*/
+.slides{
+width:400%;
+height:100%;
+position:relative;
+-webkit-animation:slide 30s infinite;
+-moz-animation:slide 30s infinite;
+animation:slide 30s infinite;
+}
+/*This is the dimensions of each image as they are slided into viewing */
+.slider{
+width:25%;
+height:100%;
+float:left;
+position:relative;
+z-index:1;
+overflow:hidden;
+}
+.slide img{
+width:auto;
+height:auto;
+}
+.image-s {
+width:100%;
+height:100%;
+}
+.image-s img{
+width:100%;
+height:100%;
+}
+
+
+/*  */
+.content{
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+}
+.content-txt{
+width:400px;
+height:150px;
+float:left;
+position:relative;
+top:300px;
+-webkit-animation:content-s 7.5s infinite;
+-moz-animation:content-s 7.5s infinite;
+animation:content-s 7.5s infinite;
+}
+.content-txt h2{
+font-family:Arial;
+text-transform:uppercase;
+font-size:70px;
+color:#fff;
+text-align:center;
+margin-left:100px;
+padding-bottom:100px;
+}
+
+/* Switch of the dots at the bottom of the Slideshow*/
+.switch{
+width:120px;
+height:10px;
+position:absolute;
+bottom:50px;
+z-index:99;
+left:30px;
+}
+.switch > ul{
+list-style:none;
+}
+/*This is to style the list of dots at the bottom of the Slideshow gallery*/
+.switch > ul > li{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#333;
+float:left;
+margin-right:5px;
+cursor:pointer;
+}
+.switch ul{
+overflow:hidden;
+}
+.on{
+width:100%;
+height:100%;
+border-radius:50%;
+background:purple;
+position:relative;
+-webkit-animation:on 30s infinite;
+-moz-animation:on 30s infinite;
+animation:on 30s infinite;
+}
+
+/* Positioning of slides at a specific animation duration  */
+@-webkit-keyframes slide{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:-100%;
+}
+46%{
+  margin-left:-100%;
+}
+50%{
+  margin-left:-200%;
+}
+71%{
+  margin-left:-200%;
+}
+75%{
+  margin-left:-300%;
+}
+96%{
+  margin-left:-300%;
+}
+}
+@-moz-keyframes slide{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:-100%;
+}
+46%{
+  margin-left:-100%;
+}
+50%{
+  margin-left:-200%;
+}
+71%{
+  margin-left:-200%;
+}
+75%{
+  margin-left:-300%;
+}
+96%{
+  margin-left:-300%;
+}
+}
+@keyframes slide{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:-100%;
+}
+46%{
+  margin-left:-100%;
+}
+50%{
+  margin-left:-200%;
+}
+71%{
+  margin-left:-200%;
+}
+75%{
+  margin-left:-300%;
+}
+96%{
+  margin-left:-300%;
+}
+}
+/*These are the positions of the Labels of each labeling of the Images in the slideshow at specific points in the animation , that give the movement look you see*/
+@-webkit-keyframes content-s{
+0%{left:-720px;}
+10%{left:0px;}
+30%{left:0px;}
+40%{left:0px;}
+50%{left:0px;}
+60%{left:0px;}
+70%{left:0px;}
+80%{left:-720px;}
+90%{left:-720px;}
+100%{left:-720px;}
+}
+@-moz-keyframes content-s{
+0%{left:-720px;}
+10%{left:300px;}
+30%{left:300px;}
+40%{left:300px;}
+50%{left:300px;}
+60%{left:300px;}
+70%{left:300px;}
+80%{left:-720px;}
+90%{left:-720px;}
+100%{left:-720px;}
+}
+@keyframes content-s{
+0%{left:-720px;}
+10%{left:300px;}
+30%{left:300px;}
+40%{left:300px;}
+50%{left:300px;}
+60%{left:300px;}
+70%{left:300px;}
+80%{left:-720px;}
+90%{left:-720px;}
+100%{left: -720px;}
+}
+/*The dots at the bottom of the slideshow for when specific pictures are "on"*/
+@-webkit-keyframes on{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:15px;
+}
+46%{
+  margin-left:15px;
+}
+50%{
+  margin-left:30px;
+}
+71%{
+  margin-left:30px;
+}
+75%{
+  margin-left:45px;
+}
+96%{
+  margin-left:45px;
+}
+}
+
+@-moz-keyframes on{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:15px;
+}
+46%{
+  margin-left:15px;
+}
+50%{
+  margin-left:30px;
+}
+71%{
+  margin-left:30px;
+}
+75%{
+  margin-left:45px;
+}
+96%{
+  margin-left:45px;
+}
+}
+
+@keyframes on{
+0%,100%{
+  margin-left:0%;
+}
+21%{
+  margin-left:0%;
+}
+25%{
+  margin-left:15px;
+}
+46%{
+  margin-left:15px;
+}
+50%{
+  margin-left:30px;
+}
+71%{
+  margin-left:30px;
+}
+75%{
+  margin-left:45px;
+}
+96%{
+  margin-left:45px;
+}
+}
+/*This is the glow animation*/
+  .glow{
+      animation: glow 2s infinite ease-in-out alternate;
+  }
+  @-webkit-keyframes glow{
+  to {
+      text-shadow: 0 0 20px purple, 0 0 30px purple, 0 0 40px purple ;
+    }
+ }

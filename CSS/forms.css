@@ -1,0 +1,46 @@
+.formBox {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px black;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    height: 400px;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    border-width: medium;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+.formBox h2 {
+    margin-bottom: 20px;
+}
+
+.formField {
+    margin-bottom: 15px;
+    
+}
+
+.formField label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.formField input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button {
+    background-color: slateblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
